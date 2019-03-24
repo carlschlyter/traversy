@@ -161,6 +161,57 @@
     $family->setName('Maria');
     $family->setNickName('Mia');
     echo $family->getName() . ' - ';
-    echo $family->getNickName();
+    echo $family->getNickName() . '<br><br>';
+
+    class places{
+        private $place;
+        private $country;
+        private $year;
+
+        function setPlace($place){
+            $this->place = $place;
+        }
+        function setCountry($country){
+            $this->country = $country;
+        }
+        function setYear($year){
+            $this->year = $year;
+        }
+        function getPlace(){
+            return $this->place;
+        }
+        function getCountry(){
+            return $this->country;
+        }
+        function getYear(){
+            return $this->year;
+        }
+    }
+
+    $veryOldPlaces = new places;
+    $veryOldPlaces->setPlace('Kristianstad');
+    $veryOldPlaces->setCountry('Sverige');
+    $veryOldPlaces->setYear('1960');    
+    echo $veryOldPlaces->getPlace() .' - ';
+    echo $veryOldPlaces->getCountry() .' - ';
+    echo $veryOldPlaces->getYear() . '<br><br>';
+
+    $oldPlaces = new places;
+    $oldPlaces->setPlace('Tamatave');
+    $oldPlaces->setCountry('Madagascar');
+    $oldPlaces->setYear('1982');    
+    echo $oldPlaces->getPlace() .' - ';
+    echo $oldPlaces->getCountry() .' - ';
+    echo $oldPlaces->getYear() . '<br><br>';
+
+    $newPlaces = new places;
+    $newPlaces->setPlace('Thulegatan');
+    $newPlaces->setCountry('Sverige');
+    $newPlaces->setYear('2018');    
+    echo $newPlaces->getPlace() .' - ';
+    echo $newPlaces->getCountry() .' - ';
+    echo $newPlaces->getYear() . '<br><br>';
+
+
 
 ?>
