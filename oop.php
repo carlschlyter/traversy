@@ -28,14 +28,21 @@
     class music{
         private $artist;
         private $song;
-        
-        public function setArtist($artist){
-            $this->artist = $artist;
-        }
 
-        public function setSong($song){
+        public function __construct($artist, $song){
+
+            $this->artist = $artist;
             $this->song = $song;
-        } 
+            // echo 'Music created'. '<br>';
+        }
+        
+        // public function setArtist($artist){
+        //     $this->artist = $artist;
+        // }
+
+        // public function setSong($song){
+        //     $this->song = $song;
+        // } 
 
         public function getArtist(){
             return $this->artist;
@@ -46,29 +53,29 @@
         }
     }
 
-    $music1 = new music;
-    $music1->setArtist('Elton John');
+    $music1 = new music('Elton John', 'Your song');
+    // $music1->setArtist('Elton John');
     echo $music1->getArtist() . ' - ';
-    $music1->setSong('Your song');
+    // $music1->setSong('Your song');
     echo $music1->getSong() . '<br><br>';
 
-    $music2 = new music;
-    $music2->setArtist('The Beatles');    
-    $music2->setSong('Blackbird');
+    $music2 = new music('The Beatles', 'Blackbird');
+    // $music2->setArtist('The Beatles');    
+    // $music2->setSong('Blackbird');
     echo $music2->getArtist() . ' - ';
     echo $music2->getSong() . '<br><br>';
 
-    $music3 = new music;
-    $music3->setArtist('Luciano Pavarotti');
-    $music3->setSong('Che gelida manina');
-    echo $music3->getArtist() . ' - ';
-    echo $music3->getSong() . '<br><br>';   
+    // $music3 = new music;
+    // $music3->setArtist('Luciano Pavarotti');
+    // $music3->setSong('Che gelida manina');
+    // echo $music3->getArtist() . ' - ';
+    // echo $music3->getSong() . '<br><br>';   
 
-    $jazzMusic = new music;
-    $jazzMusic->setArtist('Nils Landgren');
-    $jazzMusic->setSong('Wonderful world');
-    echo $jazzMusic->getArtist() . ' - ';
-    echo $jazzMusic->getSong() . '<br><br>';
+    // $jazzMusic = new music;
+    // $jazzMusic->setArtist('Nils Landgren');
+    // $jazzMusic->setSong('Wonderful world');
+    // echo $jazzMusic->getArtist() . ' - ';
+    // echo $jazzMusic->getSong() . '<br><br>';
 
     class movies{
         private $title;
