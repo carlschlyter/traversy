@@ -116,8 +116,51 @@
     $newMovies->setActress('Lady Gaga');
     echo $newMovies->getTitle() . ' - ';
     echo $newMovies->getActor() . ' - ';
-    echo $newMovies->getActress();
+    echo $newMovies->getActress() . '<br><br>';
 
-    
+    class friends{
+        private $name;
+        private $nickName;
+
+        function setName($name){
+            $this->name = $name;            
+        }
+
+        function setNickName($nickName){
+            $this->nickName = $nickName;
+        }
+
+        function getName(){
+            return $this->name;
+        }
+
+        function getNickName(){
+            return $this->nickName;
+        }
+    }
+
+    $oldFriends = new friends;
+    $oldFriends->setName('Klas');
+    $oldFriends->setNickName('Orre');
+    echo $oldFriends->getName() . ' - ';
+    echo $oldFriends->getNickName() . '<br><br>';
+
+    $newFriends = new friends;
+    $newFriends->setName('Jonathan');
+    $newFriends->setNickName('Jonte');
+    echo $newFriends->getName() . ' - ';
+    echo $newFriends->getNickName() . '<br><br>'; 
+
+    $madaFriends = new friends;
+    $madaFriends->setName('Eugenie');
+    $madaFriends->setNickname('Nini');
+    echo $madaFriends->getName() . ' - ';
+    echo $madaFriends->getNickName() . '<br><br>';
+
+    $family = new friends;
+    $family->setName('Maria');
+    $family->setNickName('Mia');
+    echo $family->getName() . ' - ';
+    echo $family->getNickName();
 
 ?>
